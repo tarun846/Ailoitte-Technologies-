@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react';
+import { Accordion } from './Components/Accordion';
+import {Nav} from "./Components/Navbar" ;
+import { TeamMembers } from './Components/TeamMembers';
+import data from './data/data.json'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [objdata, setdata] = useState([])
+    return (
+        <div>
+            <Nav/>
+     
+          <div className='grid' >
+         <div className='Categories' >
+          <h2> Categories </h2>
+         <Accordion objdata = {objdata} setdata = {setdata}  />
+         </div>
+
+          <div className='TeamMembers' >
+           <h2> Team Members </h2> 
+          <TeamMembers data = {objdata} />
+          </div>
+      
+          </div>
+
+        </div>
+    );
 }
 
 export default App;
