@@ -1,110 +1,94 @@
- [ 
-    {
-       "name" :  "Frontend Developer"  , 
-     "value": [
-         
-        {
-            "id"   : 1 ,
-            "name" : "Giorgio Torre",
-            "avatar": "https://media-exp1.licdn.com/dms/image/C5603AQHKTv8X7CSAzQ/profile-displayphoto-shrink_200_200/0/1654792520367?e=1672876800&v=beta&t=uK4yN0Mw3nSApKKiKey7gedK00NnKwzAYhyavkFKIYo" ,
-            "yrs"  : 3
-       
-            } ,
+[
+  {
+    "name": "Frontend Developer",
+    "value": [
+      {
+        "id": 1,
+        "name": "Giorgio Torre",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C5603AQHKTv8X7CSAzQ/profile-displayphoto-shrink_200_200/0/1654792520367?e=1672876800&v=beta&t=uK4yN0Mw3nSApKKiKey7gedK00NnKwzAYhyavkFKIYo",
+        "yrs": 3
+      },
 
-         {
-            "id"   : 2 ,
-            "name" : "John",
-            "avatar":  "https://media-exp1.licdn.com/dms/image/C4D03AQEhAWbpcSnw6w/profile-displayphoto-shrink_100_100/0/1658886913801?e=1672876800&v=beta&t=uxZ9_yuRgDV4q3gBWtOepigFFWOUBz5o790NMPWIdaY"
-              ,   "yrs"  : 2
-         
-            } ,
+      {
+        "id": 2,
+        "name": "John",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQEhAWbpcSnw6w/profile-displayphoto-shrink_100_100/0/1658886913801?e=1672876800&v=beta&t=uxZ9_yuRgDV4q3gBWtOepigFFWOUBz5o790NMPWIdaY",
+        "yrs": 2
+      },
 
+      {
+        "id": 3,
+        "name": "Rohan",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQG4MM8xkcPvcg/profile-displayphoto-shrink_100_100/0/1655266072217?e=1672876800&v=beta&t=yQ_G2vgnLYmqDwXY1KrutZD1EDBR3XsBdHBa_G673Us",
+        "yrs": 1
+      },
 
-         {
-            "id"   : 3 ,
-            "name" : "Rohan",
-            "avatar":  "https://media-exp1.licdn.com/dms/image/C4D03AQG4MM8xkcPvcg/profile-displayphoto-shrink_100_100/0/1655266072217?e=1672876800&v=beta&t=yQ_G2vgnLYmqDwXY1KrutZD1EDBR3XsBdHBa_G673Us"
-            , "yrs"  : 1
-         } ,
+      {
+        "id": 4,
+        "name": "Yuka",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C5603AQF9BV1zKI3M4A/profile-displayphoto-shrink_100_100/0/1621942658663?e=1672876800&v=beta&t=W5y_5l9XliATcX0M5QUC2iHMMD89dZvshvJ4W1oXVbg",
+        "yrs": 5
+      }
+    ]
+  },
 
-         {
-            "id"   : 4 ,
-            "name" : "Yuka",
-            "avatar": "https://media-exp1.licdn.com/dms/image/C5603AQF9BV1zKI3M4A/profile-displayphoto-shrink_100_100/0/1621942658663?e=1672876800&v=beta&t=W5y_5l9XliATcX0M5QUC2iHMMD89dZvshvJ4W1oXVbg"
-           ,   "yrs"  : 5
-         }
-    ]  } ,
+  {
+    "name": "Backend Developer",
+    "value": [
+      {
+        "id": 5,
+        "name": "Elizabeth",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C5603AQFI7-KZn-leyQ/profile-displayphoto-shrink_100_100/0/1612122922894?e=1672876800&v=beta&t=fQ1qmFvw3T7Mzcd6-2namnf9Akhhco2hfXk5YkW87xM",
 
+        "yrs": 3
+      },
 
-   {
+      {
+        "id": 6,
+        "name": "masuda",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C4E03AQE_P-6cRusZ2Q/profile-displayphoto-shrink_100_100/0/1516458050094?e=1672876800&v=beta&t=08uH4Me-Wjr_X6VRUADltr4JRHUvcpzigyUnmP5e3CI",
+        "yrs": 4
+      },
 
-     "name" : "Backend Developer" ,
-     "value" : [
-         
-        {
-            "id"   : 5 ,
-            "name" : "Elizabeth",
-            "avatar":  "https://media-exp1.licdn.com/dms/image/C5603AQFI7-KZn-leyQ/profile-displayphoto-shrink_100_100/0/1612122922894?e=1672876800&v=beta&t=fQ1qmFvw3T7Mzcd6-2namnf9Akhhco2hfXk5YkW87xM"
- 
-            , "yrs"  : 3
-            } ,
+      {
+        "id": 7,
+        "name": "sam",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQHMWT5kTyuaDA/profile-displayphoto-shrink_100_100/0/1517025742232?e=1672876800&v=beta&t=Lza6AFd7TqeziH7EFitPXsXv8k8B2ajgcEwnNcO3i2I",
+        "yrs": 2
+      },
 
-         {
-            "id"   : 6 ,
-            "name" : "masuda",
-            "avatar":  "https://media-exp1.licdn.com/dms/image/C4E03AQE_P-6cRusZ2Q/profile-displayphoto-shrink_100_100/0/1516458050094?e=1672876800&v=beta&t=08uH4Me-Wjr_X6VRUADltr4JRHUvcpzigyUnmP5e3CI"
-            , "yrs"  : 4
-            } ,
+      {
+        "id": 8,
+        "name": "Yuka garrison ",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQHMWT5kTyuaDA/profile-displayphoto-shrink_100_100/0/1517025742232?e=1672876800&v=beta&t=Lza6AFd7TqeziH7EFitPXsXv8k8B2ajgcEwnNcO3i2I",
+        "yrs": 1
+      }
+    ]
+  },
 
+  {
+    "name": "UI UX",
+    "value": [
+      {
+        "id": 9,
+        "name": "Ashis",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQGqeA-DgNf29w/profile-displayphoto-shrink_100_100/0/1516284625347?e=1672876800&v=beta&t=P-OWEAjDPfAnlOzzOmv6BtdOHPD50S51uo3A1IIzvio",
+        "yrs": 1
+      },
 
-         {
-            "id"   : 7 ,
-            "name" : "sam",
-            "avatar":  "https://media-exp1.licdn.com/dms/image/C4D03AQHMWT5kTyuaDA/profile-displayphoto-shrink_100_100/0/1517025742232?e=1672876800&v=beta&t=Lza6AFd7TqeziH7EFitPXsXv8k8B2ajgcEwnNcO3i2I" 
-            , "yrs"  : 2
-         } ,
+      {
+        "id": 10,
+        "name": "masuda Anupam",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C5103AQG6DK8PeETBgQ/profile-displayphoto-shrink_100_100/0/1516953597738?e=1672876800&v=beta&t=WnwoDHyen9T-oC91-QUgnRRfZpbnjLFutmpzkk0sOdU",
+        "yrs": 4
+      },
 
-         {
-            "id"   : 8 ,
-            "name" : "Yuka garrison ",
-            "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQHMWT5kTyuaDA/profile-displayphoto-shrink_100_100/0/1517025742232?e=1672876800&v=beta&t=Lza6AFd7TqeziH7EFitPXsXv8k8B2ajgcEwnNcO3i2I"
-            , "yrs"  : 1
-         }
-    ] 
-   } ,
-
-
-   {
-   "name" : "UI UX" ,
-    "value" :  [
-         
-        {
-            "id"   : 9 ,
-            "name" : "Ashis",
-            "avatar":  "https://media-exp1.licdn.com/dms/image/C4D03AQGqeA-DgNf29w/profile-displayphoto-shrink_100_100/0/1516284625347?e=1672876800&v=beta&t=P-OWEAjDPfAnlOzzOmv6BtdOHPD50S51uo3A1IIzvio"
-            , "yrs"  : 1
-            } ,
-
-         {
-            "id"   : 10,
-            "name" : "masuda Anupam",
-            "avatar":  "https://media-exp1.licdn.com/dms/image/C5103AQG6DK8PeETBgQ/profile-displayphoto-shrink_100_100/0/1516953597738?e=1672876800&v=beta&t=WnwoDHyen9T-oC91-QUgnRRfZpbnjLFutmpzkk0sOdU"
-            , "yrs"  : 4
-            } ,
-
-
-         {
-            "id"   : 11 ,
-            "name" : "mats olsone",
-            "avatar":  "https://media-exp1.licdn.com/dms/image/C4D03AQHwczUHvGixtQ/profile-displayphoto-shrink_100_100/0/1651261617820?e=1672876800&v=beta&t=nNIZy-j9GZOE4Ada3nv5noYib1DXyaDzKzcYmVQWf3I" 
-            , "yrs"  : 5
-         } 
-
-     
-    ] 
-
-   }
-
-
-
+      {
+        "id": 11,
+        "name": "mats olsone",
+        "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQHwczUHvGixtQ/profile-displayphoto-shrink_100_100/0/1651261617820?e=1672876800&v=beta&t=nNIZy-j9GZOE4Ada3nv5noYib1DXyaDzKzcYmVQWf3I",
+        "yrs": 5
+      }
+    ]
+  }
 ]
