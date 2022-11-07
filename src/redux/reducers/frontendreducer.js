@@ -1,3 +1,4 @@
+
 import {
   backendactions,
   Frontendactions,
@@ -16,20 +17,17 @@ function addCrown(data, id) {
   });
 
   let mpo = newvalue.filter((e) => {
-    console.log(e);
+    
     if (e.value.id === id) {
-      console.log('sahi');
+
       const foundIdx = newvalue.findIndex((el) => el.value.id === id);
-      console.log(foundIdx);
       let value = { ...e, flag: true };
-      console.log(newvalue);
       newvalue.splice(foundIdx, 1);
       newvalue.unshift(value);
       return value;
     }
     return null
   }); 
-  console.log(mpo);
   return newvalue
 }
 
@@ -51,10 +49,11 @@ const uiuxinitialState = {
 export const frontend = (state = frontendinitialState, action) => {
   switch (action.type) {
     case Frontendactions.SET_PRODUCTS:
+       console.log('adding');
       if (removeduplicate(state, action)) {
         return state;
       }
-
+      
       let data = [{ flag: false, ...action.payload }, ...state?.data];
       return { value: 'Frontend Developer', data: data };
 

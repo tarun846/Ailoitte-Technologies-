@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {  useDispatch, useSelector } from 'react-redux';
 import { Deletaccord, Leadaccord } from '../../redux/actions/producaction';
 import Dots from '../../assets/dots-icon.svg';
 import king from '../../assets/crown.svg';
 import './TeamMembers.css';
+import useLocalStorage from '../../hook/useLocalstaragehook';
 
 export function TeamMembers({ data }) {
+   const sahi = useLocalStorage('key' , [] );
   const frontendstate = useSelector((state) => state.frontend);
   const backendstate = useSelector((state) => state.backend)
   const Uiuxstate = useSelector((state) => state.uiux);
-  
- 
+  let datastored =    [frontendstate, backendstate, Uiuxstate];
 
-  let datastored = [frontendstate, backendstate, Uiuxstate];
-
-  console.log(datastored[0]);
   return (
     <div className="team-categoryContainer">
       {datastored.map((e, i , cmparray ) => {
@@ -26,7 +24,6 @@ export function TeamMembers({ data }) {
 }
 
 function TeamCategory({ data, name  ,cmparray }) {
-   console.log(data);
   const [clicked, setclicked] = useState(false);
   const dispatch = useDispatch('papaocus',[]);
   function toggle(index) {
@@ -39,6 +36,7 @@ function TeamCategory({ data, name  ,cmparray }) {
   function handleremove(id, name) {
     dispatch(Deletaccord(id, name));
     setclicked(false)
+    
   }
 
   function handlelead(id, name) {
