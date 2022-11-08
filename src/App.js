@@ -12,9 +12,43 @@ function App() {
   dispatch(Fetchproduct())
   }, [dispatch])
   
+
   return (
     <div>
       <Nav />
+
+ <div className='multistepper' > 
+      <ul className="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+         
+            <li className="form-stepper-active text-center form-stepper-list" step="1">
+                <a className="mx-2">
+                    <span className="form-stepper-circle">
+                        <span>1</span>
+                    </span>
+                    <div class="label">Create Project</div>
+                </a>
+            </li>
+            
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+                <a class="mx-2">
+                    <span className="form-stepper-circle text-muted">
+                        <span>2</span>
+                    </span>
+                    <div className="label text-muted">Add Team</div>
+                </a>
+            </li>
+    
+            <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
+                <a className="mx-2">
+                    <span className="form-stepper-circle text-muted">
+                        <span>3</span>
+                    </span>
+                    <div className="label text-muted">Preview & Hire</div>
+                </a>
+            </li>
+        </ul>
+
+        </div>
       <div className="grid">
         <div className="Categories">
           <h2> Categories </h2>

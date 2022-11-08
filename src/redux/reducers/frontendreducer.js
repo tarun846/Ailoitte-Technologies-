@@ -11,6 +11,9 @@ function removeduplicate(state, action) {
   return da;
 }
 
+function run() {
+  localStorage.setItem('cmpvalue' , JSON.stringify([frontendinitialState.data , backendinitialState.data , uiuxinitialState.data] ) )
+}
 function addCrown(data, id) {
   let newvalue = data.data.map((e) => {
     return { ...e, flag: false };
@@ -55,15 +58,17 @@ export const frontend = (state = frontendinitialState, action) => {
       }
       
       let data = [{ flag: false, ...action.payload }, ...state?.data];
+      run()
       return { value: 'Frontend Developer', data: data };
 
     case Frontendactions.REMOVE_Frontend_Developer:
       let bini = state.data.filter((e) => e.value.id !== action.payload);
-
+      run()
       return { ...state, data: bini };
 
     case Frontendactions.Lead_PRODUCT:
       let crownadder = addCrown(state, action.payload);
+      run()
       return { ...state, data: crownadder };
     default:
       return state;
@@ -78,12 +83,15 @@ export const backend = (state = backendinitialState, action) => {
       }
 
       let data = [{ ...action.payload, flag: false }, ...state?.data];
+      run()
       return { value: 'Backend Developer', data: data };
     case backendactions.REMOVE_SELECTED_PRODUCT:
       let bini = state.data.filter((e) => e.value.id !== action.payload);
+      run()
       return { ...state, data: bini };
     case backendactions.Lead_PRODUCT:
       let crownadder = addCrown(state, action.payload);
+      run()
       return { ...state, data: crownadder };
     default:
       return state;
@@ -98,26 +106,18 @@ export const uiux = (state = uiuxinitialState, action) => {
       }
 
       let data = [{ ...action.payload, flag: false }, ...state?.data];
+      run()
       return { value: 'UI UX', data: data };
     case uiuxactions.REMOVE_SELECTED_PRODUCT:
       let bini = state.data.filter((e) => e.value.id !== action.payload);
+      run()
       return { ...state, data: bini };
 
     case uiuxactions.Lead_PRODUCT:
       let crownadder = addCrown(state, action.payload);
+      run()
       return { ...state, data: crownadder };
     default:
       return state;
   }
 };
-
-// export const productReducer = (state = initialState , action) => {
-//     switch (action.type) {
-//         case  'frontend' :
-//             return state
-//             break;
-
-//         default:
-//             return state
-//     }
-// }
