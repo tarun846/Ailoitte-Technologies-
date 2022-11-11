@@ -4,10 +4,10 @@ import { Fetchproduct } from './redux/actions/producaction';
 import { Accordion } from './Components/Accordion';
 import { Nav } from './Components/Navbar';
 import { TeamMembers } from './Components/TeamMembers';
-
 function App() {
   const dispatch = useDispatch()
- 
+  
+   
   useEffect(() => {
   dispatch(Fetchproduct())
   }, [dispatch])
@@ -25,12 +25,12 @@ function App() {
                     <span className="form-stepper-circle">
                         <span>1</span>
                     </span>
-                    <div class="label">Create Project</div>
+                    <div className="label">Create Project</div>
                 </a>
             </li>
             
-            <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
-                <a class="mx-2">
+            <li className="form-stepper-unfinished text-center form-stepper-list" step="2">
+                <a className="mx-2"  >
                     <span className="form-stepper-circle text-muted">
                         <span>2</span>
                     </span>
@@ -38,7 +38,7 @@ function App() {
                 </a>
             </li>
     
-            <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
+            <li className="form-stepper-unfinished text-center form-stepper-list" step="3">
                 <a className="mx-2">
                     <span className="form-stepper-circle text-muted">
                         <span>3</span>
@@ -60,7 +60,7 @@ function App() {
                
                <button className='right_btn' > Next  </button>
               </div>
-          <TeamMembers  />
+          <TeamMembers/>
         </div>
       </div>
     </div>

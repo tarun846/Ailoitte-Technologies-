@@ -1,10 +1,10 @@
-import { Fetchproducts } from "../constants/actionstype";
+import { actionstype } from "../constants/actionstype";
 
 
 
 export  function Fetchproduct( state = [], action ) {
     switch (action.type) {
-        case Fetchproducts.Fetchproducts  :
+        case actionstype.FETCH_PRODUCT  :
 
          return     [ ...action.payload ]
     

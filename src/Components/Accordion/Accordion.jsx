@@ -14,7 +14,7 @@ export function Accordion({ setdata, objdata }) {
 
 
 
-  function toggle(index) {
+  function toggle(index , val) {
     if (clicked === index) {
       return setclicked(null);
     }
@@ -22,17 +22,12 @@ export function Accordion({ setdata, objdata }) {
   }
 
   function handleClick(val, c) {
+    console.log(val , c);
     let newobj = {
       value: val,
     };
-
-    if (c === 'Frontend Developer') {
-      dispatch(setfrontend(newobj));
-    } else if (c === 'Backend Developer') {
-      dispatch(setBackend(newobj));
-    } else if (c === 'UI UX') {
-      dispatch(setUiux(newobj));
-    }
+    
+      dispatch(setfrontend(newobj ,c ));
   }
 
   if ( !data || data.length === 0) {
@@ -44,11 +39,11 @@ export function Accordion({ setdata, objdata }) {
         return (
           <div key={i}>
             <div onClick={() => toggle(i)} className="Accordion-button">
-              <div> {item.name}</div>
+              <div> {item[i].Category}</div>
               <div> {clicked === i ? '-' : '+'} </div>
             </div>
             <div className="options">
-              {item.value.map((e) => {
+              {item.map((e) => {
                 return clicked === i ? (
                   <div key={e.id} className=" Category-Adder">
                     <div className="details-Container">
@@ -63,7 +58,7 @@ export function Accordion({ setdata, objdata }) {
 
                     <button
                       className="Add_button"
-                      onClick={() => handleClick(e, item.name)}
+                      onClick={() => handleClick(e, e.Category)}
                     >
                       {' '}
                       Add{' '}

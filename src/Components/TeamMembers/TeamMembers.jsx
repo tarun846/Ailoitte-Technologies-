@@ -4,28 +4,32 @@ import { Deletaccord, Leadaccord } from '../../redux/actions/producaction';
 import Dots from '../../assets/dots-icon.svg';
 import king from '../../assets/crown.svg';
 import './TeamMembers.css';
-import useLocalStorage from '../../hook/useLocalstaragehook';
 
-export function TeamMembers({ data }) {
-  const frontendstate = useSelector((state) => state.frontend);
-  const backendstate = useSelector((state) => state.backend)
-  const Uiuxstate = useSelector((state) => state.uiux);
-  let datastored =    [frontendstate, backendstate, Uiuxstate];
-
-  
+export function TeamMembers() {
+  const datas = useSelector((state) => state.DataReducer)
+  let actualdata = Object.values(datas)  
+ 
+    useEffect(() => {
+       localStorage.setItem('sahi' , JSON.stringify(datas) )
+    } ,[datas] )
+    
 
     
   return (
     <div className="team-categoryContainer">
-      {datastored.map((e, i , cmparray ) => {
-        if (e.data.length === 0) return null ;
-        return <TeamCategory data={e.data} key={i} name={e.value} cmparray = {cmparray}   />;
-      })}
+      {  actualdata.map((e, i  ) => {
+         
+          if ( e.length  > 0 ) {
+             return <TeamCategory data={e} key={i}  name = {e[0].value.Category} />
+    
+          }
+          return  null  
+      }) }
     </div>
   );
 }
 
-function TeamCategory({ data, name  }) {
+function TeamCategory({ data , name  }) {
   const [clicked, setclicked] = useState(false);
   const dispatch = useDispatch('papaocus',[]);
   function toggle(index) {

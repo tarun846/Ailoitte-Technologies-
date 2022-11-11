@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux';
 import { Fetchproduct } from './Fetchproduct';
-import { frontend, backend, uiux } from './frontendreducer';
+import { DataReducer, backend, uiux } from './frontendreducer';
 
 const reducers = combineReducers({
   productfetch : Fetchproduct ,
-  frontend: frontend,
-  backend: backend,
-  uiux: uiux,
+  DataReducer  :  DataReducer ,
 });
 
 export default reducers;

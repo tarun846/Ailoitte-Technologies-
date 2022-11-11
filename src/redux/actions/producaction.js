@@ -1,51 +1,39 @@
 import axios from 'axios';
 import {
-  backendactions,
-  Frontendactions,
-  uiuxactions,
-  Fetchproducts
+actionstype
 } from '../constants/actionstype';
 
-export const setfrontend = (product) => {
+export const setfrontend = (product , value) => {
   return {
-    type: Frontendactions.SET_PRODUCTS,
+    type: actionstype.SET_PRODUCTS,
     payload: product,
+    value : value
   };
 };
 
-export const setBackend = (product) => {
+export const Deletaccord = (id, deletename) => {
   return {
-    type: backendactions.SET_PRODUCTS,
-    payload: product,
-  };
-};
-
-export const setUiux = (product) => {
-  return {
-    type: uiuxactions.SET_PRODUCTS,
-    payload: product,
-  };
-};
-
-export const Deletaccord = (id, deletername) => {
-  return {
-    type: `REMOVE_${deletername}`,
+    type:  actionstype.REMOVE_PRODUCT,
     payload: id,
+    value : deletename, 
   };
 };
 
-export const Leadaccord = (id, leadername) => {
+export const Leadaccord = (id, leadername ) => {
+  console.log(id , leadername);
   return {
-    type: `Lead_${leadername}`,
+    type: actionstype.Lead_PRODUCT,
     payload: id,
+    value : leadername
   };
 };
 
 export const Fetchproduct =  () => {
   return async function(dispatch) {
   try {
-    const response  = await axios('https://api.npoint.io/39167dda58b162cf3290')
-    dispatch ({type : Fetchproducts.Fetchproducts , payload : response.data})
+    const response  = await axios('https://api.npoint.io/d223e8007f11797cae6f')
+    console.log(response.data);
+    dispatch ({type : actionstype.FETCH_PRODUCT , payload : response.data})
   } catch (error) {
     console.error(error);
   }
