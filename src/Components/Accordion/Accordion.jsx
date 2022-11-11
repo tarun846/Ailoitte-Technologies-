@@ -22,11 +22,11 @@ export function Accordion({ setdata, objdata }) {
   }
 
   function handleClick(val, c) {
-    console.log(val , c);
+
     let newobj = {
       value: val,
     };
-    
+
       dispatch(setfrontend(newobj ,c ));
   }
 

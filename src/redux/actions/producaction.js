@@ -20,7 +20,6 @@ export const Deletaccord = (id, deletename) => {
 };
 
 export const Leadaccord = (id, leadername ) => {
-  console.log(id , leadername);
   return {
     type: actionstype.Lead_PRODUCT,
     payload: id,
@@ -32,7 +31,6 @@ export const Fetchproduct =  () => {
   return async function(dispatch) {
   try {
     const response  = await axios('https://api.npoint.io/d223e8007f11797cae6f')
-    console.log(response.data);
     dispatch ({type : actionstype.FETCH_PRODUCT , payload : response.data})
   } catch (error) {
     console.error(error);

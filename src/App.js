@@ -57,7 +57,6 @@ function App() {
           <div className="TeamMembers">
            <div className='flex' style={{"justifyContent" : 'space-between' }}  > 
                <h2> Team Members </h2>
-               
                <button className='right_btn' > Next  </button>
               </div>
           <TeamMembers/>
