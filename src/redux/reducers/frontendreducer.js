@@ -2,7 +2,7 @@ import {actionstype} from '../constants/actionstype';
 
  
 function getname(action) {
-  return   action?.value?.split(' ').join('')
+  return action?.value
 } 
 
 
@@ -34,9 +34,9 @@ let newvalue = data[value].map((e) => {
 
 
 let initialState =  JSON.parse(localStorage.getItem('sahi')) ||   {
-  FrontendDeveloper: [],
-  BackendDeveloper : [],
-  UIUX : [],
+  'Frontend Developer': [],
+  'Backend Developer' : [],
+  'UI UX' : [],
 }
 export const  DataReducer = (state = initialState, action) => {
   let text = getname(action)
@@ -49,8 +49,8 @@ export const  DataReducer = (state = initialState, action) => {
       return state
 
     case actionstype.REMOVE_PRODUCT:
-      let textvalue = getname(action)
-      let data = state[textvalue].filter((e) => {
+      
+      let data = state[text].filter((e) => {
       return  e.value.id !== action.payload
       
       });
@@ -65,3 +65,4 @@ export const  DataReducer = (state = initialState, action) => {
   }
 };
 
+export  const getvalueSelector = (state) => state.DataReducer

@@ -1,11 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-}
 
-body{
-  font-family: 'Roboto', sans-serif;
-}
 .grid {
   display: grid;
   grid-template-columns: 1.5fr 4fr;
@@ -13,7 +6,7 @@ body{
 }
 
 .Categories {
-  margin: 0 10px;
+
 }
 .Accordion-button {
   display: flex;
@@ -64,11 +57,7 @@ body{
 }
 
 .right_btn{
-  padding: 8px 3rem;
-  color: white;
-  border: 5px;
-  background-color: #545479;
-  cursor: pointer;
+
 }
 .flex-line{
   display: flex;

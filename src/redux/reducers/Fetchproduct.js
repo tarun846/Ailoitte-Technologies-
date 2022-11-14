@@ -12,3 +12,5 @@ export  function Fetchproduct( state = [], action ) {
             return state
     }
 }
+
+export  const dataSelector  = (state) => state.productfetch

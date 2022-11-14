@@ -4,6 +4,31 @@ import { Fetchproduct } from './redux/actions/producaction';
 import { Accordion } from './Components/Accordion';
 import { Nav } from './Components/Navbar';
 import { TeamMembers } from './Components/TeamMembers';
+import styled from 'styled-components';
+
+ const Gridcontainer = styled.div`
+   display: grid;
+  grid-template-columns: 1.5fr 4fr;
+  padding: 10px;
+ `;
+  const CategoriesContainer  = styled.div`
+    margin: 0 10px;
+  `;
+  // const 
+   const PrimaryButton = styled.button`
+   padding: 8px 3rem;
+  color: white;
+  border: 5px;
+  background-color: #545479;
+  cursor: pointer;
+   `;
+
+   const FlexWrapper = styled.div`
+   display: flex;
+    align-items: center;
+    justify-content : space-between;
+   
+   `
 function App() {
   const dispatch = useDispatch()
   
@@ -49,19 +74,20 @@ function App() {
         </ul>
 
         </div>
-      <div className="grid">
-        <div className="Categories">
+
+      <Gridcontainer>
+        <CategoriesContainer>
           <h2> Categories </h2>
           <Accordion/>
-          </div>
+          </CategoriesContainer>
           <div className="TeamMembers">
-           <div className='flex' style={{"justifyContent" : 'space-between' }}  > 
+           <FlexWrapper   > 
                <h2> Team Members </h2>
-               <button className='right_btn' > Next  </button>
-              </div>
+               <PrimaryButton > Next  </PrimaryButton>
+              </FlexWrapper>
           <TeamMembers/>
         </div>
-      </div>
+      </Gridcontainer >
     </div>
   );
 }

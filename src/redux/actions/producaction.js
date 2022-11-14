@@ -3,7 +3,7 @@ import {
 actionstype
 } from '../constants/actionstype';
 
-export const setfrontend = (product , value) => {
+export const setproductdata = (product , value) => {
   return {
     type: actionstype.SET_PRODUCTS,
     payload: product,
